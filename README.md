@@ -18,9 +18,14 @@ The focus is on **clean architecture, modularity, and scalability** for future b
 
 ## 🖼️ Architecture & UML
 
-- Architecture overview: <img width="425" height="392" alt="BrokerAdapterSystem" src="https://github.com/user-attachments/assets/84b8c082-92d2-4fc1-97e9-c9ecb11b2b64" />
-`[Draw.io Link]`  
-- UML diagram: `![Normalization UML](./docs/normalization-uml.png)`  
+### Architecture Overview
+<img width="425" height="392" alt="BrokerAdapterSystem" src="https://github.com/user-attachments/assets/84b8c082-92d2-4fc1-97e9-c9ecb11b2b64" />
+
+### UML Diagram
+<img width="755" height="441" alt="BrokerIntegrationLayer_UML" src="https://github.com/user-attachments/assets/973c09a6-8da7-4ec1-89c8-a570b8f5d0e0" />
+
+🔗 **View full UML on Draw.io:**  
+[View on Google Drive](https://drive.google.com/file/d/1JJhJMS-aCaua8ZgxWRVZknSM6xSAaFtB/view?usp=sharing)
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -34,6 +39,7 @@ The focus is on **clean architecture, modularity, and scalability** for future b
 ----------------------------------------------------------------------------------------------------------------------------
 
 ## 🏗️ Project Structure
+```
 broker-integration-layer/
 ├── src/
 │ ├── adapters/ # Broker-specific integration logic (e.g., ZerodhaAdapter)
@@ -47,39 +53,52 @@ broker-integration-layer/
 ├── package.json
 ├── tsconfig.json
 └── README.md
+```
 
 ----------------------------------------------------------------------------------------------------------------------------
 
 ## ⚙️ Setup Instructions
 
-1️⃣ Clone the repository
+- **Clone the repository**
+  ```bash
   git clone https://github.com/shruti-120/broker-integration-layer.git
   cd broker-integration-layer
+  ```
 
-2️⃣ Install dependencies
+- **Install dependencies**
+  ```bash
   npm install
+  ```
 
-3️⃣ Configure environment variables
-  Create a .env file based on .env.example:
+- **Configure environment variables**
+  Create a `.env` file based on `.env.example`, then fill in your own values:
   Then fill in your own values:
+  ```env
   GET_ALL_TRADE_URL=https://api.kite.trade/trades
   ZERODHA_API_KEY=<your_zerodha_api_key_here>
   ACCESS_TOKEN=<your_access_token_here>
   MOCK_MODE=true
+  ```
   
-4️⃣ Build and run
-  To build TypeScript and start the app: npm start
-  To directly run the sync service: npm run sync
+- **Build and run**
+  To build TypeScript and start the app:
+  ```bash
+  npm start
+  ```
+  To directly run the sync service:
+  ```bash
+  npm run sync
+  ```
 
 ----------------------------------------------------------------------------------------------------------------------------
 
 ## 🔮 Resources Used:
 
- -https://kite.trade/docs/connect/v3/user/#login-flow
- -https://kite.trade/docs/connect/v3/user/#authentication-and-token-exchange
- -https://kite.trade/docs/connect/v3/orders/#retrieving-all-trades
- -https://groww.in/trade-api/docs/curl/orders#get-trades-for-order
- -https://smartapi.angelbroking.com/docs/Orders
- -https://dev.to/daniyarotynshin/design-pattern-strategy-ts-3e55
- -https://medium.com/@diegomottadev/factory-method-pattern-implementation-using-typescript-and-node-js-6ac075967f22
- -https://www.digitalocean.com/community/tutorials/setting-up-a-node-project-with-typescript
+- https://kite.trade/docs/connect/v3/user/#login-flow
+- https://kite.trade/docs/connect/v3/user/#authentication-and-token-exchange
+- https://kite.trade/docs/connect/v3/orders/#retrieving-all-trades
+- https://groww.in/trade-api/docs/curl/orders#get-trades-for-order
+- https://smartapi.angelbroking.com/docs/Orders
+- https://dev.to/daniyarotynshin/design-pattern-strategy-ts-3e55
+- https://medium.com/@diegomottadev/factory-method-pattern-implementation-using-typescript-and-node-js-6ac075967f22
+- https://www.digitalocean.com/community/tutorials/setting-up-a-node-project-with-typescript
